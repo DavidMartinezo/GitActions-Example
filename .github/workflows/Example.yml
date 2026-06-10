@@ -1,13 +1,16 @@
 name: Example
 
-on: [push]
+on:
+  push:
+    branches: 
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Displays a message
-        run: echo "hello world, David"
+        run: echo "This changes are affecting the main branch"
 
       - name: Another task
         run: echo "Another Task"
