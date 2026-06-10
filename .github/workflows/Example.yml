@@ -1,0 +1,14 @@
+name: Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Displays a message
+        run: echo "hello world, David"
+
+      - name: Another task
+        run: echo "Another Task"
+        
