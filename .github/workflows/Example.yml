@@ -2,12 +2,15 @@ name: Example
 
 on:
  workflow_dispatch: 
+ pull_request: 
+  branches:
+     - main
   # push:
   #   branches: 
   #     - main
   # schedule:
   #   - cron: "*/5 * * * *" # Runs every 5 minutes  
-
+#there are 3 kinds of triggers in Github Actions, Webhooks, schedule and manual.
 jobs:
   build:
     runs-on: ubuntu-latest
