@@ -23,7 +23,7 @@ jobs:
 
       - name: List the repo files
         run: | 
-              echo "The repo ${{github.repository}}" contains the following Files: "
+              echo "The repo ${{github.repository}} contains the following Files: "
               tree
 
         
