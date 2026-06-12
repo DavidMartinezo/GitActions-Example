@@ -1,0 +1,17 @@
+name: conditional execution
+on:
+ workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        operating_system: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.operating_system }}
+    steps:
+      - name: Only Windows
+        if: ${{matrix.operating_system == 'windows-latest'}}
+        run: echo "This should only be executed in windows}}
+      - name: commom step for other OS 
+        run: echo "Common Step"
