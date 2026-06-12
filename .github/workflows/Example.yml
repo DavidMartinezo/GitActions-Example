@@ -5,9 +5,12 @@ on:
  pull_request: 
   branches:
      - main
-  # push:
-  #   branches: 
-  #     - main
+ push:
+    paths:
+      - 'code/**'
+      - '.github/workflows/example.yml'
+    branches: 
+      - main
   # schedule:
   #   - cron: "*/5 * * * *" # Runs every 5 minutes  
 #there are 3 kinds of triggers in Github Actions, Webhooks, schedule and manual.
