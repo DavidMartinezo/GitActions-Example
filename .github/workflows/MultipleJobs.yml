@@ -23,3 +23,11 @@ jobs:
       steps: 
       - name: Print Job's name
         run: echo "job 3"
+
+    job-4: 
+     needs: [job-1, job-3]
+     runs-on: ubuntu-latest
+     steps:
+     - name: Prints job's name 
+       run: echo "Job 4 in ubuntu"
+
