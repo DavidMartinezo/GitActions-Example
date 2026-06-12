@@ -1,23 +1,23 @@
 name: Variables
 
-on: 
-  workflow_dispatch
+on:
+  workflow_dispatch:
 
 env:
-  global_variable: GLOBAL var
+  global_variable: "GLOBAL var"
 
 jobs:
   job-1:
     runs-on: ubuntu-latest
-    env: 
-      job_variable: JOB Var
+
+    env:
+      job_variable: "JOB Var"
+
     steps:
       - name: step 1 of job-1
-      run: |
-        echo "the value of the global var is: {{env.global_variable}}"
-        echo "the value of the Job var is: {{env.job_variable}}"
-        echo "the value of the step var is: {{env.step_variable}}
-
         env:
-        step_variable : STEP Var 
-      
+          step_variable: "STEP Var"
+        run: |
+          echo "the value of the global var is: ${{ env.global_variable }}"
+          echo "the value of the Job var is: ${{ env.job_variable }}"
+          echo "the value of the step var is: ${{ env.step_variable }}"
