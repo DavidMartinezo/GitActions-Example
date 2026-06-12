@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Only Windows
         if: ${{matrix.operating_system == 'windows-latest'}}
-        run: echo "This should only be executed in windows}}
+        run: echo "This should only be executed in windows"
       - name: commom step for other OS 
         run: echo "Common Step"
